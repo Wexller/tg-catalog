@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "lint": "eslint --no-fix ./src && eslint --no-fix ./types && vue-tsc --noEmit",
     "lint:fix": "eslint src --fix && eslint types --fix",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "predeploy": "vue-tsc && vite build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "tailwind-variants": "^0.1.13",
@@ -28,6 +30,7 @@
     "eslint-plugin-storybook": "^0.6.13",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-vue": "^9.17.0",
+    "gh-pages": "^6.0.0",
     "postcss": "^8.4.28",
     "prettier": "^3.0.3",
     "typescript": "^5.0.2",
