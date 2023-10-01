@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Alert, MainButton } from 'vue-tg';
 import { ref } from 'vue';
+import TProductList from 'src/components/TProductList.vue';
 
 const showAlert = ref(false);
 
@@ -11,7 +12,8 @@ const onMainButtonClick = () => {
 
 <template>
   <div class="container mx-auto">
-    Проверка
+    <TProductList />
+
     <MainButton text="Оформить заказ" visible @click="onMainButtonClick" />
 
     <Alert v-if="showAlert" message="Успешно!" />
