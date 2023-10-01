@@ -17,5 +17,9 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: [{ find: 'src', replacement: resolve(__dirname, './src') }],
     },
+    define: {
+      __BASE_PREFIX__: JSON.stringify(process.env.VITE_BASE_PREFIX ?? ''),
+      __OUT_DIR__: JSON.stringify(process.env.VITE_OUT_DIR ?? ''),
+    },
   };
 });
